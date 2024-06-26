@@ -1,0 +1,47 @@
+b4ylen, Binomial Distribution Calculator, c4 - eng stats
+
+---------------------------------------------------
+
+import math
+
+def binomial_distribution(n, p, x):
+
+"""
+
+Calculate the binomial distribution for given parameters.
+
+Parameters:
+
+n (int): Number of trials.
+
+p (float): Probability of success on each trial.
+
+x (int): Number of successes.
+
+Returns:
+
+float: Probability of x successes out of n trials.
+
+"""
+
+if x < 0 or x > n:
+
+return 0
+
+return math.comb(n, x) * (p ** x) * ((1 - p) ** (n - x))
+
+# Example usage:
+
+n = 10 # Number of trials
+
+p = 0.5 # Probability of success on each trial
+
+x = 5 # Number of successes
+
+probability = binomial_distribution(n, p, x)
+
+print(f"The probability of getting {x} successes out of {n} trials is {probability:.4f}")
+
+---------------------------------------------------
+
+The function called “binomial_distribution” has three parameters: n (number of trials), p (probability of success on each trial), and x (number of total successes). 
